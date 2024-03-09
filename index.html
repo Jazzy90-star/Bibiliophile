@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Bibliophile</h1>
+      <h3>Your Personalized Library For Your Books</h3>
+     
+          <form id="myForm">
+            <div class="form-group">
+              <label for="book-title">Book Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title-input"
+                placeholder="Harry Potter and the Philosopher's stone"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input
+                type="text"
+                class="form-control"
+                id="author-input"
+                placeholder="J.K Rowling"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="ISBN">ISBN</label>
+              <input
+                type="text"
+                class="form-control"
+                id="book-ISBN"
+                placeholder="9780545069670"
+              />
+            </div>
+            <div class="form-group">
+              <label for="Book-Format">Book Format</label>
+              <select class="form-control" id="book-format" required>
+                <option disabled selected>Select Format</option>
+                <option>EBook/Digital</option>
+                <option>Printed</option>
+                <option>Audio</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="book-notes">Personal Notes About Book</label>
+              <textarea
+                class="form-control"
+                id="book-notes"
+                placeholder="Harry Potter is Magical!"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="rating" id="rating">
+              <h4>Book Rating</h4>
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5"><i class="fas fa-book"></i></label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4"><i class="fas fa-book"></i></label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3"><i class="fas fa-book"></i></label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2"><i class="fas fa-book"></i></label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1"><i class="fas fa-book"></i></label>
+            </div>
+            <button
+              id="create-new-collection"
+              class="btn btn-primary form-control"
+            >
+              Add Book to Your Collection
+            </button>
+          </form>
+          <br />
+          <div class="row">
+            <div class="col">
+              <table class="table" id="myListTable">
+                <thead>
+                  <h2>My Collection</h2>
+                  <tr>
+                    <th scope="col">Book Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">ISBN</th>
+                    <th scope="col">Book Format</th>
+                    <th scope="col">Book Notes</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Table rows will be added here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
